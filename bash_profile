@@ -1,4 +1,9 @@
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+if uname -a | grep arm64 > /dev/null; then
+  [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+else
+  [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+fi
+
 PS1='\[\e[0;31m\][\[\e[0;0m\]\u@\h: \w\[\e[0;31m\]]\[\e[0;32m\]$ \[\e[0;0m\]'
 export CLICOLOR=1
 complete -cf sudo
@@ -12,3 +17,4 @@ function csrinfo() {
       echo
   fi
 }
+eval "$(/opt/homebrew/bin/brew shellenv)"
