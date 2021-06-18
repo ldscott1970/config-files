@@ -6,3 +6,4 @@ Host *
   AddKeysToAgent yes
   HostKeyAlgorithms +ssh-rsa
   PubkeyAcceptedKeyTypes +ssh-rsa
+  User lscott
