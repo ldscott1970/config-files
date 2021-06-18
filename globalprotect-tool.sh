@@ -24,7 +24,7 @@ fi
 connect () {
   # For OS X
   if [ $(uname) == 'Darwin' ]; then
-    openconnect -b --disable-ipv6 --no-dtls --protocol=gp --cafile=$CA_FILE $VPNURL
+    echo | openconnect -b --disable-ipv6 --no-dtls --protocol=gp --cafile=$CA_FILE $VPNURL
   fi
   # For GNU/Linux
   if [ $(uname) == 'Linux' ]; then
@@ -35,7 +35,7 @@ connect () {
     # It can take moment to bring up the tun interface.
     sleep 3
     # Connect using openconnect
-    openconnect -b --disable-ipv6 --no-dtls --protocol=gp --interface=tun0 --cafile=$CA_FILE $VPNURL
+    echo | openconnect -b --disable-ipv6 --no-dtls --protocol=gp --interface=tun0 --cafile=$CA_FILE $VPNURL
   fi
   echo 'CONNECTED!'
 }
@@ -50,6 +50,8 @@ disconnect () {
   fi
   # Wait a bit for openconnect to disconnect gracefully
   sleep 3
+  echo
+
   # For Linux - Remove tun0 interface
   if [ $(uname) == 'Linux' ]; then
     # Bring down the tun interface
