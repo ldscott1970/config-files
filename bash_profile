@@ -5,6 +5,7 @@ else
 fi
 
 PS1='\[\e[0;31m\][\[\e[0;0m\]\u@\h: \w\[\e[0;31m\]]\[\e[0;32m\]$ \[\e[0;0m\]'
+PATH=$PATH:$HOME/Documents/config-files
 export CLICOLOR=1
 complete -cf sudo
 complete -cf man
