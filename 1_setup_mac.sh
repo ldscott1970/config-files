@@ -2,6 +2,7 @@
 rm -f ~/.bash_profile
 ln -s ~/Documents/config-files/bash_profile ~/.bash_profile
 ln -s ~/Documents/config-files/vimrc.conf ~/.vimrc
+ln -s ~/Documents/config-files/ssh-config ~/.ssh/config && chmod 600 ~/.ssh/config
 
 # Setup Git
 git config pull.rebase false

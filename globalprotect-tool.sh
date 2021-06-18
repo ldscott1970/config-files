@@ -3,7 +3,7 @@
 # Variables for the openconnect command
 VPNURL='https://sssnssvpn.bor.usg.edu'
 VPNC_SCRIPT='/usr/share/vpnc-scripts/vpnc-script'
-CA_FILE='~/.cert/sssnssvpn.bor.usg.edu.crt'
+CA_FILE="$HOME/.cert/sssnssvpn.bor.usg.edu.crt"
 OPENCONNECT_PID=$(ps -A | grep 'openconnect' | grep -v grep | awk '{print $1}')
 
 # Make sure the user is running the script as root.

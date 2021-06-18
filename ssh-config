@@ -1,0 +1,8 @@
+Host *
+  ServerAliveInterval 60
+  ServerAliveCountMax 3
+  ForwardAgent no
+  ConnectTimeout 5
+  AddKeysToAgent yes
+  HostKeyAlgorithms +ssh-rsa
+  PubkeyAcceptedKeyTypes +ssh-rsa
