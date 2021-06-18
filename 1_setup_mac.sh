@@ -3,6 +3,9 @@ rm -f ~/.bash_profile
 ln -s ~/Documents/config-files/bash_profile ~/.bash_profile
 ln -s ~/Documents/config-files/vimrc.conf ~/.vimrc
 
+# Setup Git
+git config pull.rebase false
+
 # Load bash profile
 source ~/.bash_profile
 
