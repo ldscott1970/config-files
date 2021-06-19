@@ -24,11 +24,13 @@ fi
 connect () {
   # For OS X
   if [ $(uname) == 'Darwin' ]; then
-    if [ -z "$OPENCONNECT_PID" ]; then
+    echo $OPENCONNECT_PID
+    if [ ! -z "$OPENCONNECT_PID" ]; then
       echo "Already connected!"
       exit
     fi
-    echo | openconnect -b --disable-ipv6 --no-dtls --protocol=gp --cafile=$CA_FILE $VPNURL
+    openconnect -b --disable-ipv6 --no-dtls --protocol=gp --cafile=$CA_FILE $VPNURL
+    echo
   fi
   # For GNU/Linux
   if [ $(uname) == 'Linux' ]; then
