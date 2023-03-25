@@ -18,3 +18,7 @@ xcode-select --install
 
 # Make executable
 chmod +x *.sh
+
+# Download new palo vpn cert
+mkdir ~/.cert
+echo | openssl s_client -connect sssnssvpn.bor.usg.edu:443 -showcerts -legacy_renegotiation > ~/.cert/sssnssvpn.bor.usg.edu.crt
