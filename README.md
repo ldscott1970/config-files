@@ -7,32 +7,32 @@ ssh-keygen
 cat ~/.ssh/config
 ```
 
-Put the key out on the Github profile
+  Put the key out on the Github profile
 
-1. Go to Documents
+2. Go to Documents
 
 ```bash
 cd ~/Documents
 ```
 
-1. Download the Git Repo
+3. Download the Git Repo
 
 ```bash
 git clone https://github.com/ldscott1970/config-files.git
 ```
 
-1. Change to the Git repo directory
+4. Change to the Git repo directory
 
 ```bash
 cd config-files
 ```
 
-1. Run the scripts
+5. Run the scripts
 
 ```bash
 sh 1_setup_mac.sh
 ```
-Get zsh to know where home brew is located
+  Get zsh to know where home brew is located
 
 ```bash
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$LOGNAME/.zprofile
