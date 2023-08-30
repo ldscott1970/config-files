@@ -27,7 +27,7 @@ git clone https://github.com/ldscott1970/config-files.git
 cd config-files
 ```
 
-5. Run the scripts
+5. Run the setup script
 
 ```bash
 sh 1_setup_mac.sh
@@ -42,9 +42,13 @@ sh 1_setup_mac.sh
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
+6. Run the homebrew app install script
+
 ```bash
 sh 2_install_homebrew_apps.sh
 ```
+
+7. Setup Vim
 
 ```bash
 sh 3_setup_vim.sh
