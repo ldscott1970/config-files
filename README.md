@@ -31,6 +31,21 @@ cd config-files
 
 ```bash
 sh 1_setup_mac.sh
+```
+Get zsh to know where home brew is located
+
+```bash
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$LOGNAME/.zprofile
+```
+
+```bash
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+```bash
 sh 2_install_homebrew_apps.sh
+```
+
+```bash
 sh 3_setup_vim.sh
 ```
