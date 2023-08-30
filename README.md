@@ -1,55 +1,53 @@
 # config-files
 
 1. Generate SSH key, if you want to make changes later
+   ```bash
+   ssh-keygen
+   ```
+   
+1. Grab the contents of the SSH key
+   ```bash
+   cat ~/.ssh/id_rsa.pub
+   ```
+  
+1. Put the key out on the Github profile
 
-```bash
-ssh-keygen
-cat ~/.ssh/config
-```
+1. Go to Documents
 
-  Put the key out on the Github profile
+   ```bash
+   cd ~/Documents
+   ```
 
-2. Go to Documents
+1. Download the Git Repo
+   ```bash
+   git clone https://github.com/ldscott1970/config-files.git
+   ```
 
-```bash
-cd ~/Documents
-```
+1. Change to the Git repo directory
+   ```bash
+   cd config-files
+   ```
 
-3. Download the Git Repo
+1. Run the setup script
+   ```bash
+   sh 1_setup_mac.sh
+   ```
+   
+1.  Get zsh to know where home brew is located
+    ```bash
+    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$LOGNAME/.zprofile
+    ```
 
-```bash
-git clone https://github.com/ldscott1970/config-files.git
-```
+    ```bash
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    ```
 
-4. Change to the Git repo directory
+1. Run the homebrew app install script
+   ```bash
+   sh 2_install_homebrew_apps.sh
+   ```
 
-```bash
-cd config-files
-```
-
-5. Run the setup script
-
-```bash
-sh 1_setup_mac.sh
-```
-  Get zsh to know where home brew is located
-
-```bash
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$LOGNAME/.zprofile
-```
-
-```bash
-eval "$(/opt/homebrew/bin/brew shellenv)"
-```
-
-6. Run the homebrew app install script
-
-```bash
-sh 2_install_homebrew_apps.sh
-```
-
-7. Setup Vim
-
-```bash
-sh 3_setup_vim.sh
-```
+1. Setup Vim
+   ```bash
+   sh 3_setup_vim.sh
+   ```
